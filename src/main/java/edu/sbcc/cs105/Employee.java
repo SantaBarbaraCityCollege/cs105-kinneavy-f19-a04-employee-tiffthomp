@@ -20,8 +20,8 @@ package edu.sbcc.cs105;
  * 
  */
 public class Employee {
-    String employeeName;
-    double currentSalary;
+    private String employeeName;
+    private double currentSalary;
 
     /**
      * Default constructor. Creates a new Employee with an "Unknown" name
@@ -45,14 +45,14 @@ public class Employee {
      * @return employee's name.
      */
     public String getName() {
-		return employeeName;
+		    return employeeName;
     }
 
     /**
      * @return employee's curent salary.
      */
     public double getSalary() {
-		return currentSalary;
+		    return currentSalary;
     }
 
     /**
@@ -60,6 +60,6 @@ public class Employee {
      * 
      */
     public void raiseSalary(double byPercent) {
-		currentSalary += (currentSalary * (byPercent / 100));
+		   currentSalary += (currentSalary * (byPercent / 100));
     }
 }
