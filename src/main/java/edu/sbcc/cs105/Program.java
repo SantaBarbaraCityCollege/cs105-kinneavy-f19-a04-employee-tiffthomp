@@ -24,81 +24,21 @@ public class Program {
      * 
      * @param args
      *            command line values. Not used in this example.
-     * @param defaultEmployee
-     *            default employee, with no name or salary specified
-     * @param defaultName
-     *            default employee name when nothing is specified by user.
-     * @param defaultSalary
-     *            default employee salary when nothing is specified by user.
-     * @param harry
-     *            first new employee.
-     * @param harryName
-     *            Harry's name.
-     * @param harrySalary
-     *            Harry's current salary.
-     * @param sally
-     *            second new employee.
-     * @param sallyName
-     *            Sally's name.
-     * @param sallySalary
-     *            Sally's current salary.
      */
     public static void main(String[] args) {
-        String defaultName; // Default employee name
-        double defaultSalary;  // Default employee salary
-        String harryName;   // Harry's name
-        double harrySalary;    // Harry's current salary
-        String sallyName;   // Sally's name
-        double sallySalary;    // Sally's current salary
-
-        // Create a default Employee with default name and salary values
-        Employee defaultEmployee = new Employee();
-        defaultName = defaultEmployee.getName();
-        System.out.println(defaultName);
-        defaultSalary = defaultEmployee.getSalary();
-        System.out.println(defaultSalary);
+        String harryName;      // employee1's name
+        double harrySalary;    // employee1's current salary
 
         // Create an Employee named Harry, who has a salary of 10,000
         Employee harry = new Employee("Harry", 10000);
         harryName = harry.getName();
-        System.out.println(harryName);
+        System.out.println("Employee: " + harryName);
         harrySalary = harry.getSalary();
-        System.out.println(harrySalary);
+        System.out.println("Salary: " + harrySalary);
 
-        // Harry gets two 10% raises
-        harry.raiseSalary(10); // First raise
+        // Harry gets a 10% raise
+        harry.raiseSalary(10);
         harrySalary = harry.getSalary();
-        System.out.println(harryName + " after 1st raise: " + harrySalary);
-        harry.raiseSalary(10); // Second raise
-        harrySalary = harry.getSalary();
-        System.out.println(harryName + " after 2nd raise: " + harrySalary);
-
-        // Harry gets a 10% salary cut
-        harry.raiseSalary(-10);
-        harrySalary = harry.getSalary();
-        System.out.println(harryName + " after pay cut: " + harrySalary);
-
-        // Create an Employee named Sally, who is a volunteer with a salary of 0
-        Employee sally = new Employee("Sally", 0);
-        sallyName = sally.getName();
-        sallySalary = sally.getSalary();
-        System.out.println(sallyName);
-        System.out.println(sallySalary);
-
-        // Sally gets a 0.5% raise... on her non-existent salary of 0
-        sally.raiseSalary(0.5);
-        sallySalary = sally.getSalary();
-        System.out.println(sallyName + " after raise: " + sallySalary);
-
-        // Sally is hired full-time, with a salary of 50000
-        sally = new Employee("Sally", 50000);
-        sallyName = sally.getName();
-        sallySalary = sally.getSalary();
-        System.out.println(sallyName + " new salary: " + sallySalary);
-
-        // Sally gets a 50% salary cut
-        sally.raiseSalary(-50);
-        sallySalary = sally.getSalary();
-        System.out.println(sallyName + " after pay cut: " + sallySalary);
+        System.out.println(harryName + "'s salary after raise: " + harrySalary);
     }
 }

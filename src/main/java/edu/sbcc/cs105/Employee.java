@@ -13,27 +13,18 @@ package edu.sbcc.cs105;
 /**
  * This class implements an employee, which is a person with a name and a salary.
  *
- * @param employeeName
- *            Employee's name
- * @param currentSalary
- *            Employee's current salary
- * 
- */
+*/
 public class Employee {
     private String employeeName;
     private double currentSalary;
 
     /**
-     * Default constructor. Creates a new Employee with an "Unknown" name
-     * and a salary of 0.
-     * 
-     */
-     public Employee(){
-         this("Unknown",0);
-     }
-
-    /**
      * Constructor that creates a new Employee with an initial name and salary.
+     * 
+     * @param employeeName
+     *            Employee's name
+     * @param currentSalary
+     *            Employee's current salary
      * 
      */
     public Employee(String employeeName, double currentSalary) {
